@@ -13,12 +13,12 @@ class Rate
         $this->unitInHours = $unitInHours;
     }
 
-    public function getPrice()
+    public function getPrice() : Price
     {
         return $this->price;
     }
 
-    public function getTotal(RentalPeriod $rentalPeriod)
+    public function getTotal(RentalPeriod $rentalPeriod) : Price
     {
         $hourCount = $rentalPeriod->getHourCount();
         $factor = (int) ceil($hourCount / $this->unitInHours);

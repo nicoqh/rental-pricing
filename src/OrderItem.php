@@ -17,7 +17,7 @@ class OrderItem
         $this->rentalPeriod = $rentalPeriod;
     }
 
-    public function getPrice()
+    public function getPrice() : Price
     {
         return $this->rate->getTotal($this->rentalPeriod)->multiply($this->quantity);
     }

@@ -23,17 +23,17 @@ class RentalPeriod
         return $period;
     }
 
-    public function getStartDate()
+    public function getStartDate() : DateTime
     {
         return $this->startDate;
     }
 
-    public function getEndDate()
+    public function getEndDate() : DateTime
     {
         return $this->endDate;
     }
 
-    public function getHourCount()
+    public function getHourCount() : int
     {
         $seconds = $this->endDate->getTimestamp() - $this->startDate->getTimeStamp();
         $minutes = $seconds / 60;

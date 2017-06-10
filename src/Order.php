@@ -16,7 +16,7 @@ class Order
         return $this->items;
     }
 
-    public function getTotal()
+    public function getTotal() : Price
     {
         $total = Price::fromAmount(0);
 
